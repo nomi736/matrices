@@ -43,9 +43,28 @@ public class Matrix {
 
         }
         else{
+            System.out.println("Matrix -- Subtraction of two matrices " +
+                    "is not possible because there order is not same");
+        }
+        return result;
+    }
+    public Matrix sub(Matrix matrix){
+        Matrix result = null;
+        if(this.row == matrix.row && this.col == matrix.col){
+            result = new Matrix(row,col);
+            for (int i = 0; i < row; i++) {
+                for (int j = 0; j < col; j++) {
+                    result.data[i][j] = this.data[i][j] - matrix.data[i][j];
+                }
+            }
+
+        }
+        else{
             System.out.println("Matrix -- Addition of two matrices " +
                     "is not possible because there order is not same");
         }
         return result;
     }
+
+
 }
