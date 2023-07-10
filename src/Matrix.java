@@ -19,9 +19,20 @@ public class Matrix {
             System.out.print("\n");
         }
     }
+    public void inputMatrix(int newData[][],int r,int c){
+        row = ( r > 0) ? r : 0;
+        col = (c > 0 ) ? c : 0;
+
+        data = new int[row][col];
+        for (int i=0; i < row; i++){
+            for (int j = 0; j < col; j++) {
+                data[i][j] = newData[i][j];
+            }
+        }
+    }
 
     public Matrix add(Matrix matrix){
-        Matrix result;
+        Matrix result = null;
         if(this.row == matrix.row && this.col == matrix.col){
             result = new Matrix(row,col);
             for (int i = 0; i < row; i++) {
