@@ -65,6 +65,10 @@ public class Matrix {
         }
         return result;
     }
+    public Matrix mul(Matrix matrix){
+        Matrix result = null;
 
+        return result;
+    }
 
 }
