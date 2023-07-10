@@ -67,7 +67,18 @@ public class Matrix {
     }
     public Matrix mul(Matrix matrix){
         Matrix result = null;
-
+        if(this.col  == matrix.row) {
+            result = new Matrix(this.row,matrix.col);
+            for (int i = 0; i < this.row; ++i)
+                for (int j = 0; j < matrix.col; ++j)
+                    for (int k = 0; k < this.col; ++k) {
+                        result.data[i][j] += this.data[i][k] * matrix.data[k][j];
+                    }
+        }
+        else{
+            System.out.println("Matrix -- Multiplication of two matrices " +
+                    "is not possible because there order is not same");
+        }
         return result;
     }
 
