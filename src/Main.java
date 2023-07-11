@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        int d[][] = {{1,2},{4,5}};
-        int e[][] = {{5,8},{2,9}};
+        int d[][] = {{1,3},{4,5}};
+        int e[][] = {{5,3},{6,9}};
 
         Matrix matrix1 = new Matrix(2,2);
         Matrix matrix2= new Matrix(2,2);
